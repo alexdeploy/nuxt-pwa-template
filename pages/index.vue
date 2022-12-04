@@ -1,8 +1,7 @@
 <template>
-    <div>
-      <h1>Welcome to the homepage</h1>
-      <AppAlert>
-        This is an auto-imported component
-      </AppAlert>
-    </div>
-  </template>
+    <section class="p-5 min-h-screen">
+      <h1 class="p-5 flex justify-center text-7xl">
+        Welcome to the homepage
+      </h1>
+    </section>
+</template>
