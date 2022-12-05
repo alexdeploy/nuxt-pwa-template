@@ -6,12 +6,21 @@
 export default defineNuxtConfig({
 
   /**
+   * * App Config
+   * pageTransition config: https://nuxt.com/docs/getting-started/transitions#transitions
+   */
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
+  /**
    * * Nuxt 3 Modules
    * All modules: https://nuxt.com/modules
    */
   modules: [
     '@nuxtjs/tailwindcss'
   ],
+  
   /**
    * * Tailwind CSS Config
    * Options: https://tailwindcss.nuxt.dev/getting-started/options/
