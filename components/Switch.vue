@@ -1,0 +1,44 @@
+<template>
+    <div class="flex">
+      <Switch
+        v-model="enabled"
+        class="dark:bg-gray-700 bg-gray-200 switcher relative inline-flex h-[29px] w-[65px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+      >
+        <span class="sr-only">Use setting</span>
+        <span
+          aria-hidden="true"
+          :class="enabled ? 'translate-x-9' : 'translate-x-0'"
+          class="pointer-events-none inline-block h-[25px] w-[25px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
+        />
+      </Switch>
+    </div>
+  </template>
+  
+<script setup>
+import { ref } from 'vue'
+import { Switch } from '@headlessui/vue'
+  
+const enabled = ref(false)
+
+</script>
+
+<script>
+export default {
+
+  mounted() {
+
+    // Get the system theme preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+
+    // Set the theme based on the system preference
+    prefersDark ? this.$colorMode.preference = 'dark' : this.$colorMode.preference = 'light';
+
+    // Switch theme button
+    const switcher = document.querySelector('.switcher')
+    console.log(this.$colorMode.preference)
+    switcher.addEventListener('click', () => 
+    this.$colorMode.preference == 'dark' ? this.$colorMode.preference = 'light' : this.$colorMode.preference = 'dark')
+   }, 
+  }
+</script>
+  

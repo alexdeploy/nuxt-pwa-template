@@ -19,6 +19,9 @@ export default defineNuxtConfig({
    */
   modules: [
     '@nuxtjs/tailwindcss',
+    ['@nuxtjs/color-mode',{
+      classSuffix: ""}],
+    'nuxt-headlessui',
     'nuxt-icon',
     ['@nuxtjs/i18n',{
       defaultLocale: 'en',
@@ -49,9 +52,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
     configPath: 'tailwind.config',
-    exposeConfig: false,
+    exposeConfig: true, // true to resolve the tailwind config in runtime. https://tailwindcss.nuxt.dev/getting-started/options/#exposeconfig
     injectPosition: 0,
-    viewer: true,
+    viewer: true, // set up the /_tailwind/ route. (Disable in production) https://tailwindcss.nuxt.dev/getting-started/options/#viewer
   },
 
   /**

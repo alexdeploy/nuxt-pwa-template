@@ -6,7 +6,7 @@
  * Global styles
  */
  
-html {
+body {
     @apply dark:bg-gray-dark bg-gray-100;
 }
 
