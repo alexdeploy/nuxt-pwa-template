@@ -1,7 +1,7 @@
 <template>
     <section class="p-5">
         <h1 class="p-5 flex justify-center text-7xl">
-        About Page
+        Welcome to the blog
         </h1>
     </section>
 </template>
