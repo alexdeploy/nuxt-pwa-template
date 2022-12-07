@@ -1,14 +1,19 @@
 <template>
   <div>
     <SplashScreen />
-    <section class="max-w-7xl mx-auto p-5">
-      
-      <h1 class="flex justify-center text-7xl">
-        Welcome to the homepage
-      </h1>
-      <h2>
-        {{ $t('social.twitter') }}
-      </h2>
+    <section class="flex max-w-7xl mx-auto p-5 justify-center">
+
+      <div>
+        <span class="text-3xl">
+          Welcome to
+        </span>
+        <h1 class="text-7xl font-sfbold">
+          {{ $t('title') }} template
+        </h1>
+        <h2>
+          homepage/
+        </h2>
+      </div>
 
     </section>
   </div>

@@ -9,9 +9,11 @@
           <li><NuxtLink to="/about">About</NuxtLink></li>
           <li><NuxtLink to="/blog">Blog</NuxtLink></li>
         </ul>
-        <Switch />
+        <Switch class="hidden lg:flex"/>
         <!-- Burger icon -->
-        <img src="/img/menu.svg" alt="" class="flex lg:hidden">
+        <NuxtLink class="flex lg:hidden">
+          <Icon name="mingcute:menu-line" class="text-gray-200 w-6 h-6 m-2" />
+        </NuxtLink>
       </nav>
     </header>
   </template>

@@ -10,7 +10,7 @@ body {
     @apply dark:bg-gray-dark bg-gray-100 min-h-screen min-w-full;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, span {
     @apply dark:text-gray-100 text-gray-900 font-sf
 }
 
