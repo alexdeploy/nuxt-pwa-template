@@ -7,7 +7,7 @@
  */
  
 body {
-    @apply dark:bg-gray-dark bg-gray-100;
+    @apply dark:bg-gray-dark bg-gray-100 min-h-screen min-w-full;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,4 +29,15 @@ p, li {
 
  body {
     @apply max-w-5xl mx-auto;
+}
+
+/* Page transition effects */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }

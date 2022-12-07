@@ -1,6 +1,6 @@
 <template>
     <header class="sticky top-0 z-10 backdrop-blur-md">
-      <nav class="navigation justify-between">
+      <nav class="max-w-7xl mx-auto navigation justify-between">
         <NuxtLink to="/">
           <img src="favicon.ico" alt="" class="w-10 h-10">
         </NuxtLink>

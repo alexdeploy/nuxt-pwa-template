@@ -1,9 +1,8 @@
 <template>
-    <footer class="flex sticky bottom-0 justify-between border-t border-1 border-dashed p-5 dark:border-gray-600">
-
-        <p class="dark:text-gray-500">© alexrueda 2022</p>
-        
-        <Switch />
-
+    <footer class="w-full fixed bottom-0 border-t border-1 border-dashed p-5 dark:border-gray-600">
+        <div class="flex max-w-7xl mx-auto justify-between">
+            <p>© alexrueda 2022</p>
+            <Switch />
+        </div>
     </footer>
 </template>
