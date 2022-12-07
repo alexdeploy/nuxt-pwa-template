@@ -9,16 +9,7 @@
           <li><NuxtLink to="/about">About</NuxtLink></li>
           <li><NuxtLink to="/blog">Blog</NuxtLink></li>
         </ul>
-
-        <div id="social" class="hidden lg:flex items-center">
-          <NuxtLink>
-            <Icon name="uil:github" class="text-gray-200 w-7 h-7" />
-          </NuxtLink>
-          <NuxtLink>
-            <Icon name="uil:twitter" class="text-gray-200 w-7 h-7" />
-          </NuxtLink>
-        </div>
-
+        <Switch />
         <!-- Burger icon -->
         <img src="/img/menu.svg" alt="" class="flex lg:hidden">
       </nav>
