@@ -5,6 +5,10 @@ module.exports = {
             colors: {
                 'gray-dark': '#121212'
             }
-        }
+        },
+        fontFamily: {
+            sf: "San Francisco",
+            sfbold: "San Francisco Bold",
+          }
     }
 }
