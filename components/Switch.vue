@@ -1,14 +1,14 @@
 <template>
-    <div class="flex">
+    <div class="flex items-center">
       <Switch
         v-model="enabled"
-        class="dark:bg-gray-700 bg-gray-200 switcher relative inline-flex h-[29px] w-[65px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        class="dark:bg-gray-700 bg-gray-200 switcher relative inline-flex h-[24px] w-[56px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
       >
         <span class="sr-only">Use setting</span>
         <span
           aria-hidden="true"
-          :class="enabled ? 'translate-x-9' : 'translate-x-0'"
-          class="pointer-events-none inline-block h-[25px] w-[25px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
+          :class="enabled ? 'translate-x-8' : 'translate-x-0'"
+          class="pointer-events-none inline-block h-[20px] w-[21px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
         />
       </Switch>
     </div>
@@ -35,9 +35,11 @@ export default {
 
     // Switch theme button
     const switcher = document.querySelector('.switcher')
-    console.log(this.$colorMode.preference)
+
+    // Add event listener function
     switcher.addEventListener('click', () => 
     this.$colorMode.preference == 'dark' ? this.$colorMode.preference = 'light' : this.$colorMode.preference = 'dark')
+    
    }, 
   }
 </script>
