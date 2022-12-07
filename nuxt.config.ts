@@ -23,6 +23,7 @@ export default defineNuxtConfig({
       classSuffix: ""}],
     'nuxt-headlessui',
     'nuxt-icon',
+    '@kevinmarrec/nuxt-pwa',
     ['@nuxtjs/i18n',{
       defaultLocale: 'en',
       detectBrowserLanguage: false,
@@ -45,6 +46,19 @@ export default defineNuxtConfig({
     }],
   ],
   
+  /**
+   * * Nuxt 3 PWA Config
+   * Repo: https://github.com/kevinmarrec/nuxt-pwa-module
+   */
+  pwa: {
+    manifest: {
+      name: 'Nuxt 3 Template',
+      short_name: 'Nuxt 3 short',
+      description: 'Nuxt 3 template for pwa development',
+      theme_color: '#ffffff',
+      lang: 'en',
+    }
+  },
   /**
    * * Tailwind CSS Config
    * Options: https://tailwindcss.nuxt.dev/getting-started/options/
