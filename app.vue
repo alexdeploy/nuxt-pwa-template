@@ -2,7 +2,7 @@
   <div>
     <NuxtLoadingIndicator />
     <AppHeader />
-    <NuxtPage class="min-h-screen" />
+    <NuxtPage />
     <AppFooter />
   </div>
 </template>
@@ -19,5 +19,6 @@
   opacity: 0;
   filter: blur(1rem);
 }
+
 
 </style>
