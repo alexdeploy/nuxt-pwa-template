@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 
   /**
    * * Nuxt 3 Modules
-   * All modules: https://nuxt.com/modules
+   * Official modules: https://nuxt.com/modules
    */
   modules: [
     '@nuxtjs/tailwindcss',
@@ -48,20 +48,27 @@ export default defineNuxtConfig({
   
   /**
    * * Nuxt 3 PWA Config
-   * Repo: https://github.com/kevinmarrec/nuxt-pwa-module
+   * Module repo: https://github.com/kevinmarrec/nuxt-pwa-module
+   * All about PWAs: https://web.dev/i18n/es/progressive-web-apps/
    */
   pwa: {
     manifest: {
       name: 'Nuxt 3 Template',
       short_name: 'Nuxt 3 short',
       description: 'Nuxt 3 template for pwa development',
-      theme_color: '#ffffff',
+      theme_color: '#121212',
       lang: 'en',
+    },
+    workbox: {
+      enabled: true, // Only enabled for development mode.
+      templatePath: './worker.js'
     }
   },
+
   /**
    * * Tailwind CSS Config
    * Options: https://tailwindcss.nuxt.dev/getting-started/options/
+   * Docs: https://tailwindcss.nuxt.dev
    */
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
