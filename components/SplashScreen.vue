@@ -8,7 +8,7 @@
 
 <template>
     <div id="full-screen" v-if="loading == true" >
-      <img class="center-logo animation w-12 fadeIn" src="favicon.ico" alt="logo"/>
+      <img class="center-component animation w-12 fadeIn" src="favicon.ico" alt="logo"/>
     </div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
     z-index: 9999;
 }
 
-.center-logo {
+.center-component {
     position: absolute;
     top: 50%;
     left: 50%;
