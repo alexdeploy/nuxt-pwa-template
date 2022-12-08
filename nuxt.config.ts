@@ -1,4 +1,3 @@
-import config from './app.config'
 /*
  * Nuxt 3 Config File
  Usage: https://nuxt.com/docs/api/configuration/nuxt-config
@@ -19,6 +18,7 @@ export default defineNuxtConfig({
    */
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxt/content',
     ['@nuxtjs/color-mode',{
       classSuffix: ""}],
     'nuxt-headlessui',
@@ -76,6 +76,13 @@ export default defineNuxtConfig({
     exposeConfig: true, // true to resolve the tailwind config in runtime. https://tailwindcss.nuxt.dev/getting-started/options/#exposeconfig
     injectPosition: 0,
     viewer: true, // set up the /_tailwind/ route. (Disable in production) https://tailwindcss.nuxt.dev/getting-started/options/#viewer
+  },
+
+  components: {
+    dirs: [
+      '~/components',
+      '~/components/library'
+    ],
   },
 
   /**
