@@ -1,9 +1,9 @@
 <template>
   <div>
-    <SplashScreen />
+    
     <section class="flex max-w-7xl mx-auto p-5 justify-center">
 
-      <div class="center-component">
+      <div>
         <span class="flex text-xl md:text-3xl justify-center">
           Welcome to
         </span>
@@ -13,6 +13,8 @@
         <h2 class="flex text-xl md:text-2xl justify-end m-2">
           template
         </h2>
+
+        <libraryButtonNuxt value="About" to='/about' />
       </div>
 
     </section>
