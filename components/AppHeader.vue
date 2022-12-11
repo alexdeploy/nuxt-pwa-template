@@ -2,7 +2,7 @@
     <header class="fixed w-full top-0 z-10 backdrop-blur-md">
       <nav class="max-w-7xl mx-auto navigation justify-between">
         <NuxtLink to="/">
-          <img src="favicon.ico" alt="" class="w-10 h-10">
+          <img src="/logo.png" alt="" class="w-10 h-10">
         </NuxtLink>
         
         <ul class="hidden lg:flex space-x-5 items-center">
