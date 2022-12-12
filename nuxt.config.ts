@@ -10,21 +10,28 @@ export default defineNuxtConfig({
    * head config: https://nuxt.com/docs/api/configuration/nuxt-config#head
    * meta config: https://nuxt.com/docs/getting-started/seo-meta
    * pageTransition config: https://nuxt.com/docs/getting-started/transitions#transitions
+   * TODO: Add more meta tags for SEO
+   * TODO: Add tags for social media sharing
+   * TODO: Migrate apple-touch-icon config to manifest.json
    */
   app: {
     head: {
-      title: 'Nuxt 3 PWA Template', // App Window Title
+      title: 'Nuxt 3 PWA Template', // App window nav title
       
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-
+        { name: 'theme-color', content: '#121212' },
         // ...
       ],
-      link: [{ rel: 'manifest', href: './manifest.json' }],
+      link: [
+        { rel: 'manifest', href: 'pwa/manifest.json' },
+        { rel: 'apple-touch-icon', href: 'pwa/icons/apple-touch-icon.png' },
+      ],
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+
   /**
    * * Nuxt 3 Modules
    * Official modules: https://nuxt.com/modules
