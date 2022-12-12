@@ -6,12 +6,25 @@ export default defineNuxtConfig({
 
   /**
    * * App Config
+   * app config: https://nuxt.com/docs/api/configuration/nuxt-config#app
+   * head config: https://nuxt.com/docs/api/configuration/nuxt-config#head
+   * meta config: https://nuxt.com/docs/getting-started/seo-meta
    * pageTransition config: https://nuxt.com/docs/getting-started/transitions#transitions
    */
   app: {
+    head: {
+      title: 'Nuxt 3 PWA Template', // App Window Title
+      
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+
+        // ...
+      ],
+      link: [{ rel: 'manifest', href: './manifest.json' }],
+    },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-
   /**
    * * Nuxt 3 Modules
    * Official modules: https://nuxt.com/modules
@@ -23,7 +36,6 @@ export default defineNuxtConfig({
       classSuffix: ""}],
     'nuxt-headlessui',
     'nuxt-icon',
-    '@kevinmarrec/nuxt-pwa',
     ['@nuxtjs/i18n',{
       defaultLocale: 'en',
       detectBrowserLanguage: false,
@@ -46,25 +58,6 @@ export default defineNuxtConfig({
     }],
   ],
   
-  /**
-   * * Nuxt 3 PWA Config
-   * Module repo: https://github.com/kevinmarrec/nuxt-pwa-module
-   * All about PWAs: https://web.dev/i18n/es/progressive-web-apps/
-   */
-  pwa: {
-    manifest: {
-      name: 'Nuxt 3 Template',
-      short_name: 'Nuxt 3 short',
-      description: 'Nuxt 3 template for pwa development',
-      theme_color: '#121212',
-      lang: 'en',
-    },
-    workbox: {
-      enabled: true, // Only enabled for development mode.
-      templatePath: './worker.js'
-    }
-  },
-
   /**
    * * Tailwind CSS Config
    * Options: https://tailwindcss.nuxt.dev/getting-started/options/
