@@ -37,33 +37,20 @@ export default defineNuxtConfig({
    * Official modules: https://nuxt.com/modules
    */
   modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxt/content',
-    ['@nuxtjs/color-mode',{
-      classSuffix: ""}],
-    'nuxt-headlessui',
     'nuxt-icon',
-    ['@nuxtjs/i18n',{
-      defaultLocale: 'en',
-      detectBrowserLanguage: false,
-      langDir: 'lang/',
-      lazy: true,
-      locales: [
-        {
-          code: 'es',
-          file: 'es.json',
-          iso: 'es-ES',
-          name: 'Español',
-        },
-        {
-          code: 'en',
-          file: 'en.json',
-          iso: 'en-US',
-          name: 'English',
-        },
-      ]
-    }],
+    '@nuxtjs/i18n',
+    '@nuxt/content',
+    'nuxt-headlessui',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
   ],
+
+  components: {
+    dirs: [
+      '~/components',
+      '~/components/library'
+    ],
+  },
   
   /**
    * * Tailwind CSS Config
@@ -78,11 +65,36 @@ export default defineNuxtConfig({
     viewer: true, // set up the /_tailwind/ route. (Disable in production) https://tailwindcss.nuxt.dev/getting-started/options/#viewer
   },
 
-  components: {
-    dirs: [
-      '~/components',
-      '~/components/library'
-    ],
+  /**
+   * * i18n Config
+   * Official module: https://nuxt.com/modules/i18n
+   */
+  i18n: {
+    defaultLocale: 'en',
+    detectBrowserLanguage: false,
+    langDir: 'lang/',
+    lazy: true,
+    locales: [
+      {
+        code: 'es',
+        file: 'es.json',
+        iso: 'es-ES',
+        name: 'Español',
+      },
+      {
+        code: 'en',
+        file: 'en.json',
+        iso: 'en-US',
+        name: 'English',
+      },
+  ]},
+
+  /**
+   * * Color mode Config
+   * Official module: https://nuxt.com/modules/color-mode
+   */
+  colorMode: {
+    classSuffix: '',
   },
 
   /**
