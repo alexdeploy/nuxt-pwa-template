@@ -1,7 +1,6 @@
 <template>
     <div class="flex items-center">
-      <Switch
-        v-model="enabled"
+      <div
         class="dark:bg-gray-700 bg-gray-200 switcher relative inline-flex h-[24px] w-[56px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
       >
         <span class="sr-only">Use setting</span>
@@ -10,20 +9,18 @@
           :class="enabled ? 'translate-x-8' : 'translate-x-0'"
           class="pointer-events-none inline-block h-[20px] w-[21px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out"
         />
-      </Switch>
+    </div>
     </div>
   </template>
-  
-<script setup>
-import { ref } from 'vue'
-import { Switch } from '@headlessui/vue'
-  
-const enabled = ref(false)
-
-</script>
 
 <script>
 export default {
+
+  data(){
+      return {
+        enabled: false,
+      }
+  },
 
   mounted() {
 
@@ -37,9 +34,17 @@ export default {
     const switcher = document.querySelector('.switcher')
 
     // Add event listener function
-    switcher.addEventListener('click', () => 
-    this.$colorMode.preference == 'dark' ? this.$colorMode.preference = 'light' : this.$colorMode.preference = 'dark')
-    
+    switcher.addEventListener('click', () => { 
+      
+      if(this.$colorMode.preference == 'dark') {
+        this.$colorMode.preference = 'light';
+        this.enabled = true;
+      } else {
+        this.$colorMode.preference = 'dark';
+        this.enabled = false;
+      }
+
+    })
    }, 
   }
 </script>

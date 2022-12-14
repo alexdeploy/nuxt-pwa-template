@@ -40,7 +40,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     '@nuxt/content',
-    'nuxt-headlessui',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
   ],
