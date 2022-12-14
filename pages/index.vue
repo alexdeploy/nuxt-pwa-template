@@ -11,11 +11,10 @@
           {{ $t('title') }}
         </h1>
         <h2 class="flex text-xl md:text-2xl justify-center m-2">
-          template
+          {{ $t('subtitle') }}
         </h2>
         <div class="flex justify-center">
           <libraryButtonNuxt value="About" to='/about' class="m-2"/>
-          <libraryButtonNuxt value="Get Started" to='/about' class="m-2"/>
         </div>
       </div>
 

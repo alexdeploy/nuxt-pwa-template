@@ -1,3 +1,5 @@
+const siteTitle = 'Nuxt 3 PWA Template'
+
 /*
  * Nuxt 3 Config File
  Usage: https://nuxt.com/docs/api/configuration/nuxt-config
@@ -16,7 +18,7 @@ export default defineNuxtConfig({
    */
   app: {
     head: {
-      title: 'Nuxt 3 PWA Template', // App window nav title
+      title: siteTitle, // App window nav title
       
       meta: [
         { charset: 'utf-8' },
